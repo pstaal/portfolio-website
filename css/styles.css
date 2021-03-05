@@ -76,6 +76,10 @@ header > img {
   width: 100px;
 }
 
+.social-media>img {
+  margin: 15px;
+}
+
 .button, button {
   /* overwrites browser defaults and resets the border */
   border: none;

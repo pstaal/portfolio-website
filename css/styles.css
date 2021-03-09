@@ -6,7 +6,7 @@ Primary Color (Purple): #357b70;
 Secondary Color (Orange): #e0b354;
  */
 
- :root {
+ :root{
   --primary-color: #357b70;
   --secondary-color: #e0b354;
   --dark-grey: #2b2b2b;
@@ -18,18 +18,20 @@ Secondary Color (Orange): #e0b354;
   --grid-item-background: lightgray;
   --sun-start: #edc655;
   --sun-halfway: #fcffad;
-  --sun-end:#f76414;
+  --sun-end: #f76414;
   --button-secondary: #2b2b2b;
   --font-normal: 400;
   --font-bold: 700;
 }
 
- body {
+ body{
   font-family: 'Lato', sans-serif;
   font-weight: var(--font-normal);
   font-size: 16px;
+
   /* Sets the font size to 16px */
   line-height: 1.6;
+
   /* Sets the line-height to 1.6 */
 }
 
@@ -56,13 +58,13 @@ a {
   color: var(--primary-color);
 }
 
-
 a:visited {
   /* visited link */
   color: var(--visited-link);
 }
 
-a:hover, a:focus {
+a:hover, 
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: none;
 }
@@ -74,24 +76,29 @@ a:active {
 
 header > img {
   width: 100px;
-}
+} 
 
-.social-media>img {
+.social-media > img {
   margin: 15px;
 }
 
-.button, button {
+.button, 
+button {
+
   /* overwrites browser defaults and resets the border */
   border: none;
   display: inline-block;
+
   /* takes the font from the outer container */
   font-family: inherit;
+
   /* styles the button */
   background-color: var(--primary-color);
   color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
+
   /* width of the border, type, color */
   border-bottom: 2px solid var(--button-border);
   transition: 0.2s opacity;
@@ -101,8 +108,10 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
+
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
+
   /* reduces the opacity of the button to 80% */
   opacity: 0.8;
 }
@@ -153,16 +162,18 @@ span {
   text-align: right;
 }
 
-.navigation-list, li {
+.navigation-list, 
+li {
   list-style-type: none;
 }
 
-.navigation-list li {
+.navigation-list li{
   display: inline-block;
   margin-left: 15px;
 }
 
 /* start grid fallback */
+
 .grid__item {
   display: inline-block;
   width: 33%;
@@ -172,6 +183,7 @@ span {
  @supports (display: grid) {
   .grid {
     display: grid;
+
     /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
